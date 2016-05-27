@@ -6,13 +6,16 @@
  */
 module.exports = function() {
   console.log("Chartin.js");
+  // require two arrays and value as params, array of strings, numbers 
   return {
-    //creating bar charts
-    drawBarChart: function(array) {
-      var chartContainer = document.getElementById("div1");
-      document.getElementById("div1").innerHTML = "";
-      //determine the array from the radio button that is checked
-      var dataset = receiveInput();
+    /**
+     * Plot out bar chart
+     *
+     */
+    drawBarChart: function(dataset, xUnits) {
+      var chartContainer = document.createElement("div");
+      chartContainer.setAttribute("id", "chartDiv");
+      document.getElementById("chartDiv").innerHTML = "";
 
       var widthOfContainer = chartContainer.scrollWidth;
       var heightOfContainer = chartContainer.scrollHeight;
@@ -72,16 +75,19 @@ module.exports = function() {
         context.fillRect(marginLeft, top, width, height);
       }
       chartContainer.appendChild(canvasElement);
-      document.getElementById("div3").innerHTML = "There's your Bar Chart";
+
+      document.createElement("div").innerHTML = "There's your Bar Chart";
     }, //end of function drawBarChart
 
-    //the Line Chart function
-    drawLineChart: function(array) {
-      var chartContainer = document.getElementById("div1");
-      document.getElementById("div1").innerHTML = "";
+    /**
+     * Plot out line chart
+     *
+     */
 
-      //determine the array from the radio button that is checked
-      var dataset = receiveInput();
+    drawLineChart: function(dataset, xUnits) {
+      var chartContainer = document.createElement("div");
+      chartContainer.setAttribute("id", "chartDiv");
+      document.getElementById("chartDiv").innerHTML = "";
 
       var widthOfContainer = chartContainer.scrollWidth;
       var heightOfContainer = chartContainer.scrollHeight;
@@ -157,16 +163,18 @@ module.exports = function() {
         context.fill();
       }
       chartContainer.appendChild(canvasElement);
-      document.getElementById("div3").innerHTML = "There's your Line Chart";
+      document.createElement("div").innerHTML = "There's your Line Chart";
     }, //end of the line chart function
 
-    //the histogram function
-    drawHistogram: function(array) {
-      var chartContainer = document.getElementById("div1");
-      document.getElementById("div1").innerHTML = "";
+    /**
+     * Plot out histogram
+     *
+     */
 
-      //determine the array from the radio button that is checked
-      var dataset = receiveInput();
+    drawHistogram: function(dataset, xUnits) {
+      var chartContainer = document.createElement("div");
+      chartContainer.setAttribute("id", "chartDiv");
+      document.getElementById("chartDiv").innerHTML = "";
 
       var widthOfContainer = chartContainer.scrollWidth;
       var heightOfContainer = chartContainer.scrollHeight;
@@ -244,17 +252,18 @@ module.exports = function() {
         context.fill();
       }
       chartContainer.appendChild(canvasElement);
-      document.getElementById("div3").innerHTML = "There's your Histogram";
+      document.createElement("div").innerHTML = "There's your Histogram";
     }, //end of histogram function
 
+    /**
+     * Plot out pie chart
+     *
+     */
 
-    //the pie chart function
-    drawPieChart: function(array) {
-      var chartContainer = document.getElementById("div1");
-      document.getElementById("div1").innerHTML = "";
-
-      //determine the array from the radio button that is checked
-      var dataset = receiveInput();
+    drawPieChart: function(dataset, xUnits) {
+      var chartContainer = document.createElement("div");
+      chartContainer.setAttribute("id", "chartDiv");
+      document.getElementById("chartDiv").innerHTML = "";
 
       var widthOfContainer = chartContainer.scrollWidth;
       var heightOfContainer = chartContainer.scrollHeight;
@@ -294,8 +303,8 @@ module.exports = function() {
 
         var hex = '0123456789ABCDEF'.split(''),
           color = '#',
-          i;
-        for (i = 0; i < 6; i++) {
+          k;
+        for (k = 0; k < 6; k++) {
           color = color + hex[Math.floor(Math.random() * 16)];
         }
         context.fillStyle = color;
@@ -305,7 +314,7 @@ module.exports = function() {
       }
       //add the canvas to the div container element
       chartContainer.appendChild(canvasElement);
-      document.getElementById("div3").innerHTML = "There's your Pie Chart";
+      document.createElement("div").innerHTML = "There's your Pie Chart";
     }
   };
 };
