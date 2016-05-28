@@ -21,7 +21,7 @@
     "line",
     "histogram"
   ],
-  "author": "https://github.com/andela-nmartin",
+  "author": "Nate Martin <godmetweenciati@gmail.com> (https://github.com/andela-nmartin)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andela-nmartin/chartinjs/issues"
