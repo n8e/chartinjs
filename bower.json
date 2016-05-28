@@ -1,0 +1,28 @@
+{
+  "name": "chartinjs",
+  "description": "Chartin.js is a JavaScript module for creating `Bar Charts`, `Histograms`, `Pie Charts` and `Line Charts`",
+  "main": "index.js",
+  "authors": [
+    "https://github.com/andela-nmartin"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "plot",
+    "charts",
+    "HTML",
+    "Canvas",
+    "Javascript",
+    "bar",
+    "pie",
+    "line",
+    "histogram"
+  ],
+  "homepage": "https://github.com/andela-nmartin/chartinjs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
