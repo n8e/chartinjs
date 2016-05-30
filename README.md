@@ -55,4 +55,4 @@ function pie() {
 ```
 The `dataset`, is an array that is used to input into the drawing functions.
 
-[images/screenshot.png]
+![Screenshot](/images/screenshot.png)
